@@ -3,6 +3,7 @@ import java.io.FileNotFoundException;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         FamilyTree testOne = new FamilyTree();
+        Service service = new Service(testOne);
         Human humanOne = new Human("Олег", "Курицин", "1974-11-21", Gender.male);
         Human humanTwo = new Human("Алла", "Михеева", "1975-06-15", Gender.female);
         Human humanThree = new Human("Дима", "Курицин", "2000-03-08", Gender.male, humanTwo, humanOne);
@@ -21,7 +22,14 @@ public class Main {
         testTwo = inOutSerialObject.loadFile(nameFile);
         System.out.println(testTwo);
 
-
+        service.sortByLastName();
+        for (Human item: testOne) {
+            System.out.println(item);
+        }
+        service.sortByID();
+        for (Human item: testOne) {
+            System.out.println(item);
+        }
 
 
     }

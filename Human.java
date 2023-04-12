@@ -77,6 +77,10 @@ public class Human implements Serializable, Comparable<Human> {
         return sbH;
     }
 
+    public int getId() {
+        return id;
+    }
+
     @Override
     public String toString() {
         if (dateOfDeath != null) {
