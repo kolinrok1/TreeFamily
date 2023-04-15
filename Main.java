@@ -17,7 +17,7 @@ public class Main {
 
         FamilyTree testTwo = new FamilyTree();
 
-        String nameFile = "FamList";
+        String nameFile = "FamList" ;
         inOutSerialObject.saveFile(testOne,nameFile);
         testTwo = inOutSerialObject.loadFile(nameFile);
         System.out.println(testTwo);
