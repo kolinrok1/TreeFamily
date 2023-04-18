@@ -1,7 +1,7 @@
 import java.io.FileNotFoundException;
 
 public class Main {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         FamilyTree testOne = new FamilyTree();
         Service service = new Service(testOne);
         Human humanOne = new Human("Олег", "Курицин", "1974-11-21", Gender.male);
@@ -23,13 +23,7 @@ public class Main {
         System.out.println(testTwo);
 
         service.sortByLastName();
-        for (Human item: testOne) {
-            System.out.println(item);
-        }
-        service.sortByID();
-        for (Human item: testOne) {
-            System.out.println(item);
-        }
+
 
 
     }

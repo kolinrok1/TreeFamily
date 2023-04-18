@@ -1,8 +1,9 @@
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-public class Human implements Serializable, Comparable<Human> {
+public class Human implements Serializable, Comparable<Human>, Animal {
     private static int count = 1;
     private final int id;
     protected final String firstName;
@@ -43,6 +44,16 @@ public class Human implements Serializable, Comparable<Human> {
         return lastname;
     }
 
+    @Override
+    public LocalDate getDateOfBirth() {
+        return null;
+    }
+
+    @Override
+    public LocalDate getDateOfDeath() {
+        return null;
+    }
+
 
     public Human getMather() {
         return mather;
@@ -50,6 +61,11 @@ public class Human implements Serializable, Comparable<Human> {
 
     public Human getFather() {
         return father;
+    }
+
+    @Override
+    public void addChildren(Animal human) {
+
     }
 
 
@@ -79,6 +95,11 @@ public class Human implements Serializable, Comparable<Human> {
 
     public int getId() {
         return id;
+    }
+
+    @Override
+    public String getFirstName() {
+        return null;
     }
 
     @Override
